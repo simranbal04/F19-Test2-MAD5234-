@@ -9,6 +9,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.shadows.ShadowToast;
+
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertThat;
 
 
 public class Infection {
@@ -26,6 +30,7 @@ MainActivity mainActivity;
     {
         EditText days = (EditText)mainActivity.findViewById(R.id.daysTextBox);
         String noofDays = days.getText().toString();
+        assertNotEquals(noofDays,"0");
 
     }
 }
